@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap" rel="stylesheet">  
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <title>Blooming Petals | Flower Decor</title>
+    <style>
+        *{
+            font-family: 'Lato', sans-serif;
+        }
+        header{
+            z-index: 99999999;
+            position: fixed;
+            width: 100%;
+            background-color: rgb(73, 6, 67);
+            height: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .navigation{
+            margin: auto;
+        }
+        .navigation ul{
+            display: flex;
+            padding-inline-end: 0;
+            padding-inline-start: 0;
+            margin: 0;
+            list-style: none;
+        }
+        .navigation ul li{
+            display: inline-block;
+            padding: 10px;
+        }
+        .navigation ul li a{
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        .navigation ul li a:hover{
+            opacity: 0.5;
+        }
+        .navigation ul li a:active{
+            font-size: 20px;
+            color: rgb(238, 55, 183);
+        }
+        .logo{
+            margin-left: 1rem;
+            transition: all 0.4s;
+        }
+        .logo:hover{
+            transform: scale(0.8);
+            cursor: pointer;
+        }
+        .user-content i{
+            float: left;
+            font-size: 20px;
+            color: white;
+            padding: 10px;
+            margin-right: 1rem;
+        }
+        .user-content i:hover{
+            cursor: pointer;
+            color: rgba(238, 55, 183, 0.7);
+        }
+        .about-us{
+            margin-top: 5rem;
+            text-align: center;
+        }
+        .about-us h3{
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 5rem;
+            font-size: 35px;
+            color: rgb(238, 55, 183);
+        }
+        .about-us-body{
+            display: flex;
+            width: 85%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-left: 1rem;
+        }
+        .about-us-body h4{
+            font-weight: 400;
+        }
+        .about-us-body h4 span{
+            color: rgb(238, 55, 183);
+        }
+        .side-slider{
+            width: 85%;
+            background-size: cover;
+            height: 20rem;
+            animation: aboutus-slider 15s infinite;
+        }
+        @keyframes aboutus-slider{
+            0% {background-image: url(https://pkgiftshop.com/wp-content/uploads/2020/03/Red-Roses-with-White-Breath-Flowers-bouquet-Price-2400.jpg);}
+            25% {background-image: url(https://pkgiftshop.com/wp-content/uploads/2020/03/Red-Roses-Flowers-bouquet-Price-18000.jpg);}
+            50% {background-image: url(https://cdn.shopify.com/s/files/1/2385/5311/products/IMG_9562.JPG?v=1573417513);}
+            75% {background-image: url(https://cdn.shopify.com/s/files/1/0038/7579/9155/products/25_1a15a1b3-2e4d-4dc7-9395-2ecda7ea789d_900x.jpg?v=1579732098);}
+            100% {background-image: url(https://cdn.blossominggifts.com/media/catalog/product/cache/7/small_image/400x400/9df78eab33525d08d6e5fb8d27136e95/b/r/bright_rose_alstroemeria_std_1.jpg);}    
+        }
+        .details-aboutus{
+            margin-top: 5rem;
+        }
+        .details-aboutus i{
+            font-size: 30px;
+            color: rgba(238, 55, 183, 0.7);
+        }
+        .details-aboutus h5{
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+        .details-aboutus p{
+            font-weight: 300;
+            margin-top: 1rem;
+        }
+        .aboutus-cards:hover{
+            transform: scale(1.05);
+        }
+        .shopnow{
+            display: flex;
+            flex-direction: column;
+            margin-top: 5rem;
+            text-align: center;
+        }
+        .shopnow h2{
+            text-transform: uppercase;
+            margin-bottom: 3rem;
+            color: rgb(238, 55, 183);
+            font-size: 35px;
+            font-weight: 600;
+        }
+        .img-shopNow{
+            width: 100%;
+            position: relative;
+        }
+        .img-shopNow img{
+            width: 100%;
+        }
+        .shopnowbtn{
+            position: absolute;
+            top: 80%;
+            left: 55%;
+            transform: translate(-80%, -55%);
+        }
+        .shopnowbtn a{
+            color: white;
+            text-decoration: none;
+        }
+        .topPicks{
+            display: flex;
+            margin: 0 auto;
+            align-items: center;
+            justify-content: center;
+        }
+        .contact-us{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        .contact-us h2{
+            text-transform: uppercase;
+            margin-bottom: 3rem;
+            color: rgb(238, 55, 183);
+            font-size: 35px;
+            font-weight: 600;
+        }
+        .contact-us-body{
+            width: 100%;
+            background-color: #212529;
+            margin: 0 auto;
+        }
+        .geo-location{
+            margin: 1rem;
+        }
+        .direct-links ul{
+            margin-top: 1rem;
+            list-style: none;
+            text-align: left;
+        }
+        .direct-links ul li{
+            line-height: 1.5rem;
+        }
+        .direct-links ul li a{
+            color: white;
+        }
+        .direct-links ul li a:hover{
+            color: rgb(238, 55, 183);
+            text-decoration: none;
+        }
+        .direct-links h3{
+            text-align: left;
+            margin-left: 2rem;
+            color: white;
+        }
+        .direct-links h3 span{
+            color: rgb(238, 55, 183);
+        }
+        .direct-links a{
+            color: white;
+            transition:  all 0.8s;
+        }
+        .direct-links i{
+            float: left;
+            margin-left: 2rem;
+            font-size: 20px;
+            padding: 8px;
+            padding-left: 1px;
+        }
+        .direct-links a:hover{
+            color: rgb(238, 55, 183);
+        }
+        .direct-links i:hover{
+            transform: scale(1.3);
+        }
+        .contact-us-body-content{
+            margin-top: 2rem;
+        }
+        .contact-info h4{
+            font-size: 25px;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            color: white;
+        }
+        .contact-info h4 span{
+            color: rgb(238, 55, 183);
+        }
+        .contact-info p{
+            color: white;
+        }
+        .contact-info p span{
+            color: rgb(238, 55, 183);
+            font-size: 20px;
+        }
+        .contact-info p a{
+            color: white;
+        }
+        .copyrights{
+            color: white;
+        }
+        .card{
+            transition: all 0.4s;
+        }
+        .card:hover{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            transform: scale(1.05);
+        }
+        .card-img-top:hover{
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+        <header>
+            <div class="logo">
+                <a href="home.html"><img src="img/logo.png" alt=""></a>
+            </div>
+            <div class="navigation">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about-us">About Us</a></li>
+                    <li><a href="#shop-now">Shop Now</a></li>
+                    <li><a href="#contact-us">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="user-content">
+                <!-- Button trigger modal -->
+                <i type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="bi bi-person-circle"></i>
+                <i type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="bi bi-cart2"></i>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Feature Disabled</h5>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">X</button>
+                        </div>
+                        <div class="modal-body">
+                            This feature is disabled as the website is in testing mode! 
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">I Understand</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    
+    <!--Slider-->
+    <section class="homepage-slider" id="home">
+        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+              <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://image.freepik.com/free-photo/wildflowers-clover-rays-sunlight_87498-829.jpg
+                " class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/header/bew.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/header/s3f5.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+    </section>
+
+    <!--About Us-->
+    <section class="container" id="about-us">
+        <div class="about-us">
+            <h3>Leading Floral Designers</h3>
+            <div class="row">
+                <div class="col-sm about-us-body">
+                    <h4>About <span>Us</span></h4>
+                    <p>Blooming Petals is one of the finest floral designers, specialized in a variety of beautiful, unique and original floral designs for weddings, parties, banquets, corporate events, inaugurations & more. We are also specialized in professional flower arrangements based on individual client requirements. We provide the most stunning, unique creations for almost every type of event.</p>
+                </div>
+                <div class="col-sm side-slider">
+                    <!--Slider in CSS-->
+                </div>
+            </div>
+            <div class="row details-aboutus">
+                <div class="col-sm aboutus-cards">
+                    <i class="fa fa-eye"></i>
+                    <h5>What you see is what you get</h5>
+                    <p>Love the bouquet on your screen? <br> That’s exactly what our local florist will prepare freshly for your order… or your money back!</p>
+                </div>
+
+                <div class="col-sm aboutus-cards">
+                    <i class="fa fa-envira"></i>
+                    <h5>Always unique, never generic</h5>
+                    <p>We only work with the most talented and unique artisans, and we’re passionate about supporting our skilled family of florists.</p>
+                </div>
+
+                <div class="col-sm aboutus-cards">
+                    <i class="fa fa-hand-paper-o"></i>
+                    <h5>Hand-delivered with care</h5>
+                    <p>Each of our orders is professionally arranged, wrapped and safely delivered with care on the exact day that you need it.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Shop Now-->
+    <section class="shopnow" id="shop-now">
+            <h2>Shop Now</h2>
+        <div class="img-shopNow">
+            <img src="img/shop now.png" alt="">
+            <div class="shopnowbtn">
+                <button class="btn btn-danger"><a href="shopnow.html">Shop Now</a></button>
+            </div>
+        </div>
+        <br> <br>
+        <h2>Top Picks</h2>
+        <div class="row topPicks">
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="img/roses4.jpg" alt="Card image cap" style="height: 286px;">
+                    <div class="card-body">
+                      <h5 class="card-title">Luxury Red Roses Bouquet</h5>
+                      <p class="card-text">101 Luxury Red Rose Bouquet. This design is hand-arranged and delivered by our team member.</p>
+                      <a href="product pages/Luxury Red Rose.html" class="btn btn-danger">View Flower</a> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="img/deluxe.jpg" alt="Card image cap" style="height: 286px;">
+                    <div class="card-body">
+                      <h5 class="card-title">Deluxe Red ~ Snow</h5>
+                      <p class="card-text">Deluxe Let It Snow. A great combination of Red and White Roses for you and your beloved ones.</p>
+                      <a href="product pages/deluxe.html" class="btn btn-danger">View Flower</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="img/d3.jpg" alt="Card image cap" style="height: 286px;">
+                    <div class="card-body">
+                      <h5 class="card-title">Daisies & Jewels</h5>
+                      <p class="card-text">Pink Jewel Roses. Imported Flowers with 15 bi-color Pink Jewel Roses</p>
+                      <a href="product pages/daisiesjewls.html" class="btn btn-danger">View Flower</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Contact Us-->
+    <section class="contact-us" id="contact-us">
+        <h2>Contact Us</h2>
+        <div class="contact-us-body">
+            <div class="row contact-us-body-content">
+
+                <!--Direct links-->
+                <div class="col-sm direct-links">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#shop-now">Shop Now</a></li>
+                        <li><a href="Project Website/product 6/orderproduct6.html">Radiance Luxury</a></li>
+                        <li><a href="Project Website/product 7/orderproduct7.html">Just Love Luxury</a></li>
+                        <li><a href="product pages/deluxe.html">Deluxe Red Snow</a></li>
+                        <li><a href="product pages/valentine love2.html">Valentine Love</a></li>
+                        <li><a href="shopEvents.html">Blooms for Birthday</a></li>
+                        <li><a href="shopFlowers.html">Beautiful Roses</a></li>
+                    </ul>
+                    <br><br>
+                    <h3>Connect With <span>Us</span></h3>
+                    <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook-square"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
+                    <a href="https://www.linkedin.pk" target="_blank"><i class="fa fa-linkedin"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
+                </div>
+                
+                <!--Address-->
+                <div class="col-sm contact-info">
+                    <h4>Reach <span>Us</span> At</h4>
+                    <p>Blooming Petals, Allium House, 43th North East Street, Sterling Heights, 49873 Michigan<br> <br> 
+                        <span>Email us at</span> <br> <a href="mailto:customer@bloomingpetals.com" target="_blank">customer@bloomingpetals.com</a> <br> <br> <span>OR</span> <br> <br>
+                        <i class="fa fa-phone">   &nbsp; &nbsp;  410 956 854 2</i>
+                    </p>
+                </div>
+                
+                <!--Map-->
+                <div class="col-sm geo-location"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47004.830150272275!2d-83.05955329633474!3d42.58072737815815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8824dc7b86d2b1e7%3A0xf51c31f0b93b22e7!2sSterling%20Heights%2C%20MI%2C%20USA!5e0!3m2!1sen!2s!4v1616228183042!5m2!1sen!2s" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+            </div>
+            <p class="copyrights">&copy; Copyrights 2021 | Blooming Petals </p>
+        </div>
+    </section>
+</body>
+</html>
